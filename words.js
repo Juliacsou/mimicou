@@ -18,15 +18,39 @@ const GAME_CATEGORIES = [
     name: "Ações",
     emoji: "🎭",
     words: [
-      "Dar marcha ré", "Trocar pneu", "Desentupir pia", "Procurar sinal de internet", "Tentar abrir um pote", "Digitar senha errada",
-      "Estacionar", "Trocar lâmpada", "Tirar selfie", "Fazer ligação", "Atender telefone", "Escovar o cachorro",
-      "Fazer maquiagem", "Cortar a unha", "Procurar algo perdido", "Empinar pipa", "Jogar videogame", "Dar cambalhota",
-      "Pagar uma conta", "Passar no pedágio", "Colocar cinto de segurança", "Tirar foto", "Apagar incêndio", "Lavar o carro",
-      "Montar móvel", "Fazer churrasco", "Tirar algo do forno", "Carregar peso", "Remar", "Surfar",
-      "Trocar fralda", "Dar banho em bebê", "Tentar pegar algo alto", "Assinar documento", "Jogar boliche", "Abrir guarda-chuva",
-      "Fazer café", "Procurar vaga de estacionamento", "Fazer compras", "Passar protetor solar", "Encher balão", "Dobrar lençol",
-      "Pescar", "Acampar", "Tirar carteira do bolso", "Entrar em reunião online", "Apresentar trabalho", "Tocar campainha",
-      "Fazer tatuagem", "Pintar parede"
+      "Trocar pneu", "Dar marcha à ré", "Jogar videogame", "Tirar selfie", "Fazer compras",
+      "Montar móvel", "Pescar", "Acampar", "Surfar", "Remar", "Estacionar o carro",
+      "Pegar a carteira", "Entrar na reunião", "Alcançar uma prateleira", "Tirar do forno",
+      "Arrumar a cama", "Lavar a louça", "Lavar roupa", "Passar roupa", "Dobrar roupa",
+      "Varrer o chão", "Passar pano", "Tirar o lixo", "Guardar as compras", "Trocar uma lâmpada",
+      "Abrir a geladeira", "Fechar a cortina", "Regar as plantas", "Aspirar o tapete", "Lavar a janela",
+      "Limpar o espelho", "Organizar o armário", "Trocar o lençol", "Pendurar roupa", "Guardar brinquedos",
+      "Escovar os dentes", "Pentear o cabelo", "Cortar as unhas", "Fazer a barba", "Passar perfume",
+      "Tomar banho", "Secar o cabelo", "Passar maquiagem", "Colocar lente de contato", "Fazer skincare",
+      "Fazer uma ligação", "Atender o telefone", "Enviar mensagem", "Tirar uma foto", "Gravar um vídeo",
+      "Digitar uma senha", "Carregar o celular", "Abrir um aplicativo", "Fechar um aplicativo", "Escanear um QR Code",
+      "Fazer uma videochamada", "Tirar print", "Procurar Wi-Fi", "Instalar um aplicativo", "Desbloquear o celular",
+      "Abastecer o carro", "Lavar o carro", "Empurrar o carro", "Colocar o cinto", "Calibrar o pneu",
+      "Buzinar", "Trocar de marcha", "Abrir o porta-malas", "Fechar o porta-malas", "Ligar o carro",
+      "Desligar o carro", "Chamar um guincho",
+      "Jogar futebol", "Jogar vôlei", "Jogar basquete", "Jogar tênis", "Jogar boliche",
+      "Andar de bicicleta", "Andar de skate", "Empinar pipa", "Fazer embaixadinhas", "Cobrar um pênalti",
+      "Defender um pênalti", "Levantar peso", "Pular corda", "Nadar", "Mergulhar",
+      "Escalar", "Patinar", "Fazer yoga",
+      "Fazer café", "Fazer pipoca", "Fritar um ovo", "Assar um bolo", "Cortar uma cebola",
+      "Espremer um limão", "Abrir uma lata", "Mexer a panela", "Servir comida", "Descascar uma banana",
+      "Ralar queijo", "Bater uma massa", "Temperar a comida", "Virar panqueca", "Experimentar a comida",
+      "Assinar um documento", "Bater ponto", "Dar uma aula", "Fazer uma prova", "Ler um livro",
+      "Escrever uma carta", "Apresentar um trabalho", "Resolver uma conta", "Carimbar um papel", "Grampear folhas",
+      "Digitar no computador", "Fazer uma entrevista", "Receber uma ligação", "Entregar um relatório", "Fazer uma apresentação",
+      "Pisar no LEGO", "Levar um susto", "Fazer careta", "Dar cambalhota", "Contar um segredo",
+      "Pedir silêncio", "Dar tchau", "Fazer pose", "Engolir um mosquito", "Escorregar na banana",
+      "Tropeçar", "Bocejar", "Espirrar", "Tossir", "Gargalhar",
+      "Chorar", "Cochilar", "Fugir de uma abelha", "Fingir dormir", "Fingir desmaiar",
+      "Farejar", "Espionar", "Disfarçar", "Investigar", "Negociar",
+      "Convencer", "Celebrar", "Perseguir", "Vigiar", "Escapar",
+      "Hipnotizar", "Equilibrar", "Flutuar", "Cambalear", "Gaguejar",
+      "Assobiar", "Resmungar", "Implorar", "Cumprimentar", "Alongar"
     ]
   },
   {
@@ -40,7 +64,13 @@ const GAME_CATEGORIES = [
       "Egoísta", "Paciente", "Impaciente", "Tímido", "Extrovertido", "Elegante",
       "Desleixado", "Organizado", "Bagunceiro", "Gentil", "Mal-humorado", "Curioso",
       "Criativo", "Preguiçoso", "Agitado", "Silencioso", "Barulhento", "Otimista",
-      "Pessimista", "Educado", "Teimoso", "Amigável"
+      "Pessimista", "Educado", "Teimoso", "Amigável",
+      "Cansado", "Faminto", "Surpreso", "Assustado", "Confuso",
+      "Desconfiado", "Envergonhado", "Orgulhoso", "Vaidoso", "Exausto",
+      "Estressado", "Aliviado", "Apaixonado", "Fofoqueiro", "Dramático",
+      "Chato", "Fofo", "Maluco", "Sonolento", "Alegre",
+      "Esperto", "Desajeitado", "Frio", "Calorento", "Mentiroso",
+      "Fiel", "Invejoso", "Chorão", "Estiloso", "Doido"
     ]
   },
   {
@@ -54,7 +84,10 @@ const GAME_CATEGORIES = [
       "Pintor", "Pedreiro", "Arquiteto", "Jornalista", "Fotógrafo", "Ator",
       "Cantor", "Dançarino", "Farmacêutico", "Psicólogo", "Recepcionista", "Secretário",
       "Contador", "Carteiro", "Cabeleireiro", "Barbeiro", "Segurança", "Juiz",
-      "Astronauta", "Cientista", "Agricultor", "Vendedor"
+      "Astronauta", "Cientista", "Agricultor", "Vendedor", "Maestro", "Mágico",
+      "Palhaço", "Pescador", "Florista", "Encanador", "Jardineiro", "Pizzaiolo",
+      "Sorveteiro", "Guarda-vidas", "Atleta", "Detetive", "Espião", "Acrobata",
+      "Astrônomo", "Mergulhador", "Guia turístico", "Locutor", "Modelo"
     ]
   },
   {
@@ -66,21 +99,37 @@ const GAME_CATEGORIES = [
       "Avô", "Irmão", "Irmã", "Tio", "Tia", "Primo",
       "Prima", "Vizinho", "Amigo", "Namorado", "Namorada", "Noivo",
       "Noiva", "Marido", "Esposa", "Professor", "Aluno", "Chefe",
-      "Funcionário", "Cliente", "Turista", "Atleta", "Músico", "Artista"
+      "Funcionário", "Cliente", "Turista", "Atleta", "Músico", "Artista",
+      "Fofoqueiro", "Nerd", "Gênio", "Bilionário", "Influenciador",
+      "Gamer", "Fitness", "Sósia", "Herói", "Vilão",
+      "Príncipe", "Princesa", "Rei", "Rainha", "Guarda",
+      "Colega", "Convidado", "Papagaio", "Zumbi", "Vampiro",
+      "Fantasma", "Bruxa", "Pirata", "Anjo", "Demônio",
+      "Alienígena", "Robô", "Hacker", "Vigarista", "Celebridade",
+      "Mímico", "Paparazzo", "Fã", "Solteiro", "Chefinho",
+      "Prisioneiro", "Capitão", "Bebum", "Ladrão", "Aventureiro"
     ]
   },
   {
     id: "marcas",
     name: "Marcas",
-    emoji: "🏷️",
+    emoji: "🏷️️",
     words: [
-      "Nike", "Adidas", "Puma", "Apple", "Samsung", "Motorola",
-      "Xiaomi", "LG", "Sony", "Nintendo", "PlayStation", "Xbox",
+      "Apple", "Samsung", "Motorola", "Xiaomi", "LG", "Sony", "Nintendo", "PlayStation", "Xbox", "Google", "Amazon",
+      "Nike", "Adidas", "Puma", "Havaianas", "Reebok", "Umbro", "Topper", "Penalty", 
+      "Renner", "C&A", "Riachuelo", "Zara", "Melissa", "Crocs", "Vans", "Converse", 
+      "Ray-Ban", "Oakley", "Lacoste", "Calvin Klein", "Hering",
       "Coca-Cola", "Pepsi", "McDonald's", "Burger King", "KFC", "Subway",
-      "Nestlé", "Lacta", "Garoto", "Bauducco", "Havaianas", "Colgate",
-      "Oral-B", "Gillette", "Nivea", "Omo", "Ypê", "Volkswagen",
-      "Toyota", "Honda", "Ford", "Chevrolet", "Hyundai", "Itaú",
-      "Bradesco", "Nubank", "Amazon", "Google"
+      "Nestlé", "Lacta", "Garoto", "Bauducco", "Red Bull", "Fanta", "Sprite", 
+      "Guaraná Antarctica", "Heineken", "Amstel", "Skol", "Brahma", "Budweiser", 
+      "Doritos", "Cheetos", "Bis", "KitKat", "Kinder", "Nutella", "Oreo", 
+      "Melitta", "Três Corações", "Cacau Show", "Kopenhagen",
+      "Sadia", "Perdigão", "Seara", "Danone", "Danoninho", "Activia", "Parmalat",
+      "Colgate", "Oral-B", "Gillette", "Nivea", "Omo", "Ypê", "Boticário", "Natura", "Avon",
+      "Itaú", "Bradesco", "Santander", "Banco do Brasil", "Caixa", "Mastercard", "Visa", "PayPal",
+      "Volkswagen", "Toyota", "Honda", "Ford", "Chevrolet", "Hyundai", "Fiat", "Jeep", "Renault", "Nissan",
+      "Disney", "Marvel", "Warner Bros", "Ri Happy", "Casas Bahia", "Magalu", 
+      "Americanas", "Vivara", "Pandora", "Fast Shop", "Pichau", "Kabum", "Estrela", "Grow"
     ]
   },
   {
@@ -90,11 +139,27 @@ const GAME_CATEGORIES = [
     words: [
       "Titanic", "Avatar", "Vingadores Ultimato", "Homem-Aranha", "Batman", "Interestelar",
       "Top Gun Maverick", "Jurassic Park", "Matrix", "Gladiador", "O Senhor dos Anéis", "Harry Potter",
-      "Jogos Vorazes", "Pantera Negra", "Deadpool", "Shrek", "Barbie", "Oppenheimer",
-      "Frozen", "Divertida Mente", "Procurando Nemo", "Toy Story", "Moana", "Encanto",
-      "Coco", "Minions", "Transformers", "Missão Impossível", "John Wick", "Rocky",
-      "Creed", "Forrest Gump", "Clube da Luta", "Se Beber Não Case", "A Origem", "Up",
-      "Wall-E", "Ratatouille", "Os Incríveis", "Carros"
+      "Jogos Vorazes", "Pantera Negra", "Deadpool", "Barbie", "Oppenheimer",
+      "Transformers", "Missão Impossível", "John Wick", "Rocky",
+      "Creed", "Forrest Gump", "Clube da Luta", "Se Beber Não Case", "A Origem",
+      "Star Wars", "De Volta para o Futuro", "Indiana Jones", "Piratas do Caribe", "Velozes e Furiosos",
+      "Homem de Ferro", "Capitão América", "Thor", "Guardiões da Galáxia", "Esqueceram de Mim",
+      "MIB Homens de Preto", "Ghostbusters", "Edward Mãos de Tesoura", "A Fantástica Fábrica de Chocolate",
+      "ET O Extraterrestre", "Tubarão", "Duna", "Legalmente Loira", "Meninas Malvadas",
+      "Curtindo a Vida Adoidado", "As Branquelas", "Todo Mundo em Pânico", "Click", "Jumanji",
+      "Independence Day", "Armageddon", "2012", "O Dia Depois de Amanhã", "King Kong",
+      "Godzilla", "Crepúsculo", "As Crônicas de Nárnia", "Percy Jackson", "A Culpa é das Estrelas",
+      "Ghost Do Outro Lado da Vida", "Dirty Dancing", "Grease", "Cantando na Chuva", "O Mágico de Oz",
+      "O Sexto Sentido", "Atividade Paranormal", "Invocação do Mal", "It A Coisa", "Coringa",
+      "Logan", "Mulher-Maravilha", "Esquadrão Suicida", "Quarteto Fantástico", "X-Men",
+      "Homem-Formiga", "Doutor Estranho", "Aquaman", "Pânico", "Premonição",
+      "Sexta-Feira 13", "A Hora do Pesadelo", "Halloween", "Exterminador do Futuro", "Rambo",
+      "Duro de Matar", "Bad Boys", "Quase Famosos", "Escola de Rock", "As Patricinhas de Beverly Hills",
+      "Simplesmente Acontece", "Diário de uma Paixão", "La La Land", "Os Miseráveis", "Bohemian Rhapsody",
+      "Elvis", "Rocketman", "Nasce uma Estrela", "Mamma Mia", "Esposa de Mentirinha",
+      "Gente Grande", "Shazam", "Venom", "Liga da Justiça", "Batman O Cavaleiro das Trevas",
+      "Superman", "Homem de Aço", "Animais Fantásticos", "Jogos Mortais", "Truque de Mestre",
+      "Sherlock Holmes", "Free Guy", "Alerta Vermelho", "Resgate", "Agente Oculto", "Planeta dos Macacos"
     ]
   },
   {
@@ -102,13 +167,23 @@ const GAME_CATEGORIES = [
     name: "Filmes Infantis",
     emoji: "🍿",
     words: [
-      "Toy Story", "Frozen", "Moana", "Encanto", "Coco", "Divertida Mente",
-      "Procurando Nemo", "Procurando Dory", "Monstros S.A.", "Universidade Monstros", "Carros", "Carros 2",
-      "Carros 3", "Ratatouille", "Wall-E", "Up", "Valente", "Luca",
-      "Red Crescer é uma Fera", "A Pequena Sereia", "Aladdin", "Mulan", "Tarzan", "Rei Leão",
-      "Bambi", "Dumbo", "Pinóquio", "Branca de Neve", "Cinderela", "A Bela e a Fera",
-      "Enrolados", "Zootopia", "Sing", "Meu Malvado Favorito", "Minions", "Madagascar",
-      "Kung Fu Panda", "Shrek", "Os Croods", "Hotel Transilvânia"
+      "Shrek", "Minions", "Frozen", "Divertida Mente", "Procurando Nemo", "Procurando Dory",
+      "Toy Story", "Moana", "Encanto", "Coco", "Monstros S.A.", "Universidade Monstros",
+      "Carros", "Carros 2", "Carros 3", "Ratatouille", "Wall-E", "Up",
+      "Valente", "Luca", "Red Crescer é uma Fera", "A Pequena Sereia", "Aladdin",
+      "Mulan", "Tarzan", "O Rei Leão", "Bambi", "Dumbo", "Pinóquio",
+      "Branca de Neve", "Cinderela", "A Bela e a Fera", "Enrolados", "Zootopia",
+      "Sing", "Meu Malvado Favorito", "Madagascar", "Kung Fu Panda", "Os Croods",
+      "Hotel Transilvânia", "Gato de Botas", "Operação Big Hero", "Detona Ralph", "Os Incríveis",
+      "A Era do Gelo", "Pica-Pau", "Madagascar 2", "Madagascar 3", "Kung Fu Panda 2",
+      "Kung Fu Panda 3", "Como Treinar o Seu Dragão", "Megamente", "Os Pinguins de Madagascar",
+      "Bolt", "Planeta do Tesouro", "Atlantis", "Irmão Urso", "Lilo & Stitch",
+      "Pocahontas", "Hércules", "Vida de Inseto", "Dois Irmãos Uma Jornada Fantástica", "Soul",
+      "Turning Red", "Elementos", "Wish", "O Bom Dinossauro", "Os Smurfs",
+      "Alvin e os Esquilos", "Pets A Vida Secreta dos Bichos", "Sing 2", "Angry Birds",
+      "Trolls", "O Poderoso Chefinho", "Pequeno Príncipe", "Gnomeu e Julieta", "Paranorman",
+      "Coraline", "A Noiva Cadáver", "Frankenweenie", "O Estranho Mundo de Jack", "A Viagem de Chihiro",
+      "Meu Amigo Totoro", "Ponyo", "O Castelo Animado", "Mulan 2", "O Rei Leão 2", "Tarzan 2"
     ]
   },
   {
@@ -130,13 +205,16 @@ const GAME_CATEGORIES = [
     name: "Atores e Atrizes",
     emoji: "🎭",
     words: [
-      "Tom Hanks", "Leonardo DiCaprio", "Brad Pitt", "Angelina Jolie", "Jennifer Aniston", "Scarlett Johansson",
-      "Robert Downey Jr", "Chris Evans", "Chris Hemsworth", "Emma Watson", "Daniel Radcliffe", "Rupert Grint",
-      "Morgan Freeman", "Will Smith", "Dwayne Johnson", "Keanu Reeves", "Johnny Depp", "Natalie Portman",
-      "Anne Hathaway", "Margot Robbie", "Ryan Reynolds", "Ryan Gosling", "Zendaya", "Tom Holland",
-      "Benedict Cumberbatch", "Samuel L Jackson", "Gal Gadot", "Henry Cavill", "Jenna Ortega", "Pedro Pascal",
-      "Viola Davis", "Meryl Streep", "Julia Roberts", "Sandra Bullock", "Jim Carrey", "Adam Sandler",
-      "Robin Williams", "Selton Mello", "Fernanda Montenegro", "Tony Ramos"
+      "Tom Hanks", "Leonardo DiCaprio", "Brad Pitt", "Angelina Jolie", "Jennifer Aniston", 
+      "Scarlett Johansson", "Robert Downey Jr", "Chris Evans", "Chris Hemsworth", "Emma Watson", 
+      "Daniel Radcliffe", "Morgan Freeman", "Will Smith", "Dwayne Johnson", "Keanu Reeves", 
+      "Johnny Depp", "Natalie Portman", "Anne Hathaway", "Margot Robbie", "Ryan Reynolds", 
+      "Ryan Gosling", "Zendaya", "Tom Holland", "Gal Gadot", "Henry Cavill", 
+      "Jenna Ortega", "Jim Carrey", "Adam Sandler", "Robin Williams", "Tom Cruise", 
+      "Harrison Ford", "Bruce Willis", "Nicolas Cage", "Vin Diesel", "Jason Statham", 
+      "Mark Wahlberg", "Chris Pratt", "Millie Bobby Brown", "Timothée Chalamet", "Robert Pattinson", 
+      "Kristen Stewart", "Orlando Bloom", "Hugh Jackman", "Al Pacino", "Robert De Niro", 
+      "Arnold Schwarzenegger", "Sylvester Stallone", "Jackie Chan", "Cameron Diaz", "Reese Witherspoon"
     ]
   },
   {
@@ -152,7 +230,16 @@ const GAME_CATEGORIES = [
       "Tails", "Naruto", "Sasuke", "Goku", "Vegeta", "Luffy",
       "Zoro", "Scooby-Doo", "Salsicha", "Bob Esponja", "Patrick", "Peppa Pig",
       "Simba", "Mufasa", "Aladdin", "Genie", "Mulan", "Tarzan",
-      "Pernalonga", "Coringa"
+      "Pernalonga", "Coringa", "Deadpool", "Pantera Negra", "Wolverine", "Homem-Formiga",
+      "Doutor Estranho", "Aquaman", "Flash", "Lanterna Verde", "Robin", "Charada",
+      "Pinguim", "Mulher-Gato", "Harley Quinn", "Thanos", "Venom",
+      "Miles Morales", "Gwen Stacy", "Optimus Prime", "Bumblebee", "Megatron",
+      "Jack Sparrow", "Indiana Jones", "Katniss Everdeen", "Sherlock Holmes", "James Bond",
+      "Gandalf", "Frodo", "Gollum", "Ash Ketchum", "Misty",
+      "Charmander", "Bulbasaur", "Squirtle", "Pac-Man", "Steve",
+      "Alex", "Princess Peach", "Bowser", "Yoshi", "Minnie Mouse",
+      "Margarida", "Pluto", "Pica-Pau", "Tom", "Jerry",
+      "Frajola", "Piu-Piu", "Taz", "Gaguinho", "Pantera Cor-de-Rosa"
     ]
   },
   {
@@ -186,15 +273,16 @@ const GAME_CATEGORIES = [
     name: "Animais",
     emoji: "🐾",
     words: [
-      "Cachorro", "Gato", "Leão", "Tigre", "Elefante", "Girafa",
-      "Zebra", "Macaco", "Gorila", "Urso", "Panda", "Coelho",
-      "Hamster", "Cavalo", "Vaca", "Porco", "Galinha", "Pato",
-      "Águia", "Coruja", "Papagaio", "Pinguim", "Golfinho", "Baleia",
-      "Tubarão", "Polvo", "Crocodilo", "Jacaré", "Cobra", "Lagarto",
-      "Camaleão", "Sapo", "Rã", "Formiga", "Abelha", "Borboleta",
-      "Aranha", "Escorpião", "Lobo", "Raposa", "Canguru", "Koala",
-      "Hipopótamo", "Rinoceronte", "Onça", "Capivara", "Lhama", "Ovelha",
-      "Cabra", "Peru"
+      "Leão", "Elefante", "Girafa", "Macaco", "Zebra", "Tigre", "Urso", "Lobo", "Raposa", "Coelho",
+      "Canguru", "Koala", "Panda", "Hipopótamo", "Rinoceronte", "Crocodilo", "Jacaré", "Tartaruga", "Serpente", "Sapo",
+      "Águia", "Coruja", "Papagaio", "Pinguim", "Flamingo", "Avestruz", "Galinha", "Pato", "Ganso", "Peru",
+      "Baleia", "Golfinho", "Tubarão", "Polvo", "Medusa", "Caranguejo", "Estrela-do-mar", "Camarão", "Cavalo-marinho", "Foca",
+      "Cachorro", "Gato", "Cavalo", "Vaca", "Porco", "Ovelha", "Cabra", "Burro", "Camelo", "Lhama",
+      "Abelha", "Borboleta", "Formiga", "Mosquito", "Aranha", "Escorpião", "Besouro", "Joaninha", "Gafanhoto", "Libélula",
+      "Morcego", "Esquilo", "Gambá", "Guaxinim", "Castor", "Toupeira", "Hiena", "Chita", "Gorila", "Chimpanzé",
+      "Tubarão-martelo", "Arraia", "Enguia", "Pelicano", "Gaivota", "Cisne", "Tucano", "Pica-pau", "Falcão", "Pombo",
+      "Camaleão", "Iguana", "Lagarto", "Cascavel", "Jiboia", "Salmão", "Atum", "Tilápia", "Sardinha", "Carpa",
+      "Ouriço", "Tatu", "Tamanduá", "Preguiça", "Ornitorrinco", "Mamute", "Búfalo", "Alce", "Rena", "Tubarão-branco"
     ]
   },
   {
@@ -202,11 +290,20 @@ const GAME_CATEGORIES = [
     name: "Corpo Humano",
     emoji: "🫀",
     words: [
-      "Cabeça", "Olho", "Nariz", "Boca", "Orelha", "Pescoço",
-      "Ombro", "Braço", "Cotovelo", "Pulso", "Mão", "Dedo",
-      "Peito", "Costas", "Barriga", "Quadril", "Perna", "Joelho",
-      "Tornozelo", "Pé", "Cabelo", "Sobrancelha", "Cílios", "Língua",
-      "Dente", "Queixo", "Testa", "Coração", "Pulmão", "Estômago"
+      "Sola do pé", "Peito do pé", "Calcanhar", "Dedo do pé", "Tornozelo",
+      "Panturrilha", "Canela", "Joelho", "Coxa", "Virilha",
+      "Umbigo", "Costela", "Clavícula", "Pescoço", "Garganta",
+      "Nuca", "Ombro", "Axila", "Cotovelo", "Antebraço",
+      "Pulso", "Palma da mão", "Dedo indicador", "Mão fechada", "Unhas",
+      "Fio de cabelo", "Sobrancelha", "Cílios", "Pálpebra", "Lóbulo da orelha",
+      "Narina", "Bochecha", "Queixo", "Céu da boca", "Língua",
+      "Dente do siso", "Gengiva", "Amígdalas", "Mandíbula",
+      "Coração", "Pulmão", "Estômago", "Fígado", "Rins",
+      "Cérebro", "Intestino", "Pâncreas", "Baço", "Vesícula",
+      "Bexiga", "Apêndice", "Tireoide",
+      "Osso", "Coluna vertebral", "Crânio", "Medula espinhal",
+      "Veias", "Artérias", "Sangue", "Suor", "Lágrimas",
+      "Saliva", "Cera de ouvido", "Musculatura", "Articulação", "Coração batendo"
     ]
   },
   {
@@ -222,142 +319,11 @@ const GAME_CATEGORIES = [
       "Nelson Mandela", "Martin Luther King Jr", "Abraham Lincoln", "Cleópatra", "Júlio César", "Napoleão",
       "Dom Pedro I", "Santos Dumont", "Tarsila do Amaral", "Machado de Assis", "Monteiro Lobato", "J. K. Rowling",
       "Stephen King", "Greta Thunberg", "Malala", "Tony Hawk", "Ronaldo Fenômeno", "Ronaldinho Gaúcho",
-      "Kobe Bryant", "LeBron James"
-    ]
-  },
-  {
-    id: "pontos-turisticos",
-    name: "Pontos Turísticos",
-    emoji: "🗺️",
-    words: [
-      "Cristo Redentor", "Torre Eiffel", "Estátua da Liberdade", "Big Ben", "Coliseu", "Taj Mahal",
-      "Muralha da China", "Pirâmides do Egito", "Disney World", "Pão de Açúcar", "Cataratas do Iguaçu", "Machu Picchu",
-      "Monte Rushmore", "Arco do Triunfo", "Louvre", "Times Square", "Hollywood", "Letreiro de Hollywood",
-      "Central Park", "Golden Gate", "Burj Khalifa", "Ópera de Sydney", "Stonehenge", "Monte Fuji",
-      "Niagara Falls", "Sagrada Família", "Petra", "Acrópole", "Lençóis Maranhenses", "Museu do Amanhã"
-    ]
-  },
-  {
-    id: "comidas",
-    name: "Comidas",
-    emoji: "🍕",
-    words: [
-      "Pizza", "Hambúrguer", "Hot dog", "Lasanha", "Macarrão", "Feijoada",
-      "Churrasco", "Arroz", "Feijão", "Strogonoff", "Purê de batata", "Batata frita",
-      "Salada", "Sopa", "Panqueca", "Omelete", "Coxinha", "Pastel",
-      "Pão de queijo", "Esfiha", "Kibe", "Sushi", "Temaki", "Yakisoba",
-      "Taco", "Burrito", "Nachos", "Sorvete", "Bolo", "Brigadeiro",
-      "Beijinho", "Pudim", "Chocolate", "Maçã", "Banana", "Morango",
-      "Melancia", "Uva", "Laranja", "Abacaxi", "Manga", "Pera",
-      "Cenoura", "Brocólis", "Tomate", "Queijo", "Iogurte", "Pipoca",
-      "Donut", "Croissant"
-    ]
-  },
-  {
-    id: "objetos",
-    name: "Objetos",
-    emoji: "🎒",
-    words: [
-      "Celular", "Computador", "Notebook", "Tablet", "Televisão", "Controle remoto",
-      "Teclado", "Mouse", "Fone de ouvido", "Relógio", "Óculos", "Espelho",
-      "Escova", "Pente", "Toalha", "Sabonete", "Shampoo", "Escova de dentes",
-      "Pasta de dentes", "Tesoura", "Caneta", "Lápis", "Borracha", "Caderno",
-      "Livro", "Mochila", "Mala", "Carteira", "Chave", "Cadeado",
-      "Lanterna", "Guarda-chuva", "Ventilador", "Geladeira", "Micro-ondas", "Fogão",
-      "Panela", "Prato", "Copo", "Talher", "Garrafa", "Vassoura",
-      "Rodo", "Balde", "Martelo", "Serrote", "Parafuso", "Furadeira",
-      "Almofada", "Cobertor", "Travesseiro", "Sofá", "Mesa", "Cadeira",
-      "Lâmpada", "Tomada", "Carregador", "Câmera", "Violão", "Bola"
-    ]
-  },
-  {
-    id: "transportes",
-    name: "Transportes",
-    emoji: "🚗",
-    words: [
-      "Carro", "Ônibus", "Moto", "Bicicleta", "Caminhão", "Van",
-      "Táxi", "Metrô", "Trem", "Avião", "Helicóptero", "Navio",
-      "Barco", "Canoa", "Jet ski", "Patinete", "Skate", "Trator",
-      "Ambulância", "Viatura", "Carro de bombeiro", "Foguete", "Balão", "Teleférico",
-      "Monotrilho", "Bonde", "Limusine", "Carroça", "Submarino", "Iate"
-    ]
-  },
-  {
-    id: "vestuario",
-    name: "Vestuário",
-    emoji: "👕",
-    words: [
-      "Camiseta", "Camisa", "Calça", "Shorts", "Saia", "Vestido",
-      "Blusa", "Moletom", "Jaqueta", "Casaco", "Terno", "Gravata",
-      "Meia", "Sapato", "Tênis", "Sandália", "Chinelo", "Boné",
-      "Chapéu", "Cinto", "Luva", "Cachecol", "Óculos de sol", "Relógio",
-      "Brinco", "Colar", "Pulseira", "Anel", "Pijama", "Fantasia"
-    ]
-  },
-  {
-    id: "futebol",
-    name: "Futebol",
-    emoji: "⚽",
-    words: [
-      "Gol", "Pênalti", "Escanteio", "Falta", "Impedimento", "Goleiro",
-      "Zagueiro", "Atacante", "Técnico", "Torcida", "Capitão", "Cartão amarelo",
-      "Cartão vermelho", "Cabeceio", "Drible", "Chuteira", "Trave", "Rede",
-      "Copa do Mundo", "Libertadores", "Champions League", "Palmeiras", "Corinthians", "São Paulo",
-      "Santos", "Flamengo", "Vasco", "Grêmio", "Internacional", "Cruzeiro",
-      "Atlético Mineiro", "Botafogo", "Fluminense", "Barcelona", "Real Madrid", "Manchester City",
-      "Liverpool", "PSG", "Messi", "Cristiano Ronaldo"
-    ]
-  },
-  {
-    id: "esportes",
-    name: "Esportes",
-    emoji: "🏅",
-    words: [
-      "Basquete", "Vôlei", "Tênis", "Natação", "Atletismo", "Ginástica",
-      "Handebol", "Rugby", "Beisebol", "Hóquei", "Golfe", "Surfe",
-      "Skate", "Judô", "Karatê", "Taekwondo", "Boxe", "Ciclismo",
-      "Escalada", "Esgrima", "Remo", "Canoagem", "Triatlo", "Badminton",
-      "Tênis de mesa", "Futsal", "Polo aquático", "Wrestling", "Hipismo", "Arco e flecha"
-    ]
-  },
-  {
-    id: "aplicativos",
-    name: "Aplicativos",
-    emoji: "📱",
-    words: [
-      "WhatsApp", "Instagram", "Facebook", "TikTok", "YouTube", "Netflix",
-      "Spotify", "Uber", "iFood", "Telegram", "X", "Threads",
-      "Pinterest", "LinkedIn", "Google Maps", "Waze", "Discord", "Zoom",
-      "Teams", "Gmail", "Google Drive", "Google Fotos", "Canva", "CapCut",
-      "Duolingo", "Tinder", "Twitch", "Amazon", "Mercado Livre", "ChatGPT"
-    ]
-  },
-  {
-    id: "jogos-famosos",
-    name: "Jogos Famosos",
-    emoji: "🎮",
-    words: [
-      "Minecraft", "Roblox", "Free Fire", "GTA", "Fortnite", "Super Mario Bros",
-      "Mario Kart", "Pokémon", "The Sims", "Among Us", "Brawl Stars", "Clash Royale",
-      "Candy Crush", "Pac-Man", "Sonic", "FIFA", "EA FC", "Call of Duty",
-      "Counter-Strike", "League of Legends", "Valorant", "Clash of Clans", "Angry Birds", "Subway Surfers",
-      "Temple Run", "Fall Guys", "Rocket League", "Zelda", "God of War", "Resident Evil",
-      "The Last of Us", "Mortal Kombat", "Street Fighter", "Just Dance", "Guitar Hero", "Tetris",
-      "Wii Sports", "Need for Speed", "Bomberman", "Mario Party"
-    ]
-  },
-  {
-    id: "sud",
-    name: "SUD",
-    emoji: "⛪",
-    words: [
-      "Templo", "Missionário", "Missionária", "Bispo", "Presidente da Estaca", "Ala",
-      "Estaca", "Sacramento", "Batismo", "Confirmação", "Livro de Mórmon", "Doutrina e Convênios",
-      "Pérola de Grande Valor", "Joseph Smith", "Morôni", "Néfi", "Leí", "Alma",
-      "Mosias", "Helamã", "Liahona", "Placas de Ouro", "Anjo Morôni", "Primária",
-      "Seminário", "Instituto", "Sociedade de Socorro", "Quórum de Élderes", "Rapazes", "Moças",
-      "História da Família", "Selamento", "Recomendação para o Templo", "Conferência Geral", "Noite Familiar", "Jejum",
-      "Dízimo", "Testemunho", "Profeta", "Apóstolo"
-    ]
-  }
-];
+      "Kobe Bryant", "LeBron James", "Jesus Cristo", "Moisés", "Leonardo da Vinci", "Pablo Picasso",
+      "Vincent van Gogh", "William Shakespeare", "Beethoven", "Mozart", "Charles Darwin", "Galileu Galilei",
+      "Ana Maria Braga", "Luciano Huck", "Ratinho", "Eliana", "Rodrigo Faro",
+      "Casimiro", "Gaules", "Luva de Pedreiro", "Carlinhos Maia", "Tirullipa",
+      "Tom Brady", "Mike Tyson", "Muhammad Ali", "Serena Williams", "Simone Biles",
+      "Ana Hickmann", "Sabrina Sato", "Datena", "Chico Xavier", "Madre Teresa",
+      "Che Guevara", "Winston Churchill", "Rainha Elizabeth II", "Príncipe William", "Barack Obama",
+      "Donald Trump", "J
