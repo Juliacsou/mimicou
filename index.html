@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=2.9.31" />
+  <link rel="stylesheet" href="styles.css?v=2.11.0" />
 </head>
 <body>
   <main class="app-shell">
@@ -20,6 +20,26 @@
         <div class="home-logo"><img src="assets/images/home/mimicou-logo.png" alt="Mimicou!"></div>
         <div class="home-actions">
           <button id="home-play" class="primary-button home-play-button" type="button"><span>▶</span> JOGAR</button>
+          <button id="home-ranking" class="home-ranking-button" type="button"><span>🏆</span> RANKING</button>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="ranking-screen" class="screen ranking-screen">
+      <div class="ranking-shell card">
+        <header class="ranking-header">
+          <button id="ranking-back" class="ranking-back-button" type="button" aria-label="Voltar">←</button>
+          <div class="ranking-title-wrap"><p class="eyebrow">MIMICOU!</p><h2>RANKING</h2><span>Resultados e rivalidades das suas partidas</span></div>
+          <div class="ranking-trophy" aria-hidden="true">🏆</div>
+        </header>
+        <nav class="ranking-tabs" aria-label="Ranking e histórico">
+          <button class="ranking-tab active" data-ranking-tab="history" type="button">HISTÓRICO DE PARTIDAS</button>
+          <button class="ranking-tab" data-ranking-tab="teams" type="button">RANKING DOS TIMES</button>
+        </nav>
+        <div class="ranking-content">
+          <section class="ranking-panel active" data-ranking-panel="history"><div id="match-history-list" class="match-history-list"></div></section>
+          <section class="ranking-panel" data-ranking-panel="teams"><div id="saved-teams-ranking" class="saved-teams-ranking"></div></section>
         </div>
       </div>
     </section>
@@ -123,33 +143,21 @@
           </div>
         </div>
 
-        <div id="team-modal" class="team-modal hidden" aria-hidden="true">
-          <div class="team-modal-backdrop" data-team-modal-close></div>
-          <div class="team-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="team-modal-title">
+
+        <div id="team-picker-modal" class="team-modal team-picker-modal hidden" aria-hidden="true">
+          <div class="team-modal-backdrop" data-team-picker-close></div>
+          <div class="team-modal-dialog team-picker-dialog" role="dialog" aria-modal="true" aria-labelledby="team-picker-title">
             <div class="team-modal-header">
-              <div>
-                <p class="team-modal-eyebrow">PERSONALIZAR TIME</p>
-                <h3 id="team-modal-title">Editar time</h3>
-              </div>
-              <button id="team-modal-close" class="team-modal-close" type="button" aria-label="Fechar">×</button>
+              <div><p class="team-modal-eyebrow">ADICIONAR TIME</p><h3 id="team-picker-title">Quem vai jogar?</h3></div>
+              <button id="team-picker-close" class="team-modal-close" type="button" aria-label="Fechar">×</button>
             </div>
-            <div class="team-modal-body">
-              <label class="team-modal-field">
-                <span>NOME DO TIME</span>
-                <input id="team-name-input-modal" type="text" maxlength="24" placeholder="Digite o nome do time">
-              </label>
-              <div class="team-modal-field">
-                <span>ESCOLHA A COR</span>
-                <div id="team-modal-colors" class="team-modal-colors"></div>
+            <div class="team-picker-body">
+              <div class="team-picker-section"><span class="team-picker-label">TIMES SALVOS</span><div id="saved-team-choices" class="saved-team-choices"></div></div>
+              <div class="team-picker-divider"><span>OU</span></div>
+              <div class="team-picker-actions">
+                <button id="create-saved-team" class="team-picker-action saved" type="button"><span class="team-picker-action-icon">★</span><span><strong>CRIAR NOVO TIME</strong><small>Fica salvo e participa do ranking</small></span><b>+</b></button>
+                <button id="create-guest-team" class="team-picker-action guest" type="button"><span class="team-picker-action-icon">⚡</span><span><strong>TIME CONVIDADO</strong><small>Joga esta partida sem salvar</small></span><b>+</b></button>
               </div>
-              <div class="team-preview-card" id="team-preview-card">
-                <span id="team-preview-orb" class="team-preview-orb"></span>
-                <strong id="team-preview-name">Time Azul</strong>
-              </div>
-            </div>
-            <div class="team-modal-actions">
-              <button id="team-modal-cancel" class="team-modal-cancel" type="button">Cancelar</button>
-              <button id="team-modal-save" class="team-modal-save" type="button">Salvar</button>
             </div>
           </div>
         </div>
@@ -275,6 +283,10 @@
           </div>
         </div>
         <button id="turn-result-next" class="primary-button" type="button">Próximo time →</button>
+        <section class="turn-words-summary" aria-label="Resumo das palavras desta vez">
+          <div class="turn-words-summary-header"><strong>PALAVRAS DESTA VEZ</strong><span id="turn-words-meta">0 acertos · 0 pulos</span></div>
+          <div id="turn-words-list" class="turn-words-list"></div>
+        </section>
       </div>
     </section>
 
@@ -321,6 +333,37 @@
     </section>
   </main>
 
+  <div id="team-modal" class="team-modal hidden" aria-hidden="true">
+    <div class="team-modal-backdrop" data-team-modal-close></div>
+    <div class="team-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="team-modal-title">
+            <div class="team-modal-header">
+              <div>
+                <p id="team-modal-eyebrow" class="team-modal-eyebrow">PERSONALIZAR TIME</p>
+                <h3 id="team-modal-title">Editar time</h3>
+              </div>
+              <button id="team-modal-close" class="team-modal-close" type="button" aria-label="Fechar">×</button>
+            </div>
+            <div class="team-modal-body">
+              <label class="team-modal-field">
+                <span>NOME DO TIME</span>
+                <input id="team-name-input-modal" type="text" maxlength="24" placeholder="Digite o nome do time">
+              </label>
+              <div class="team-modal-field">
+                <span>ESCOLHA A COR</span>
+                <div id="team-modal-colors" class="team-modal-colors"></div>
+              </div>
+              <div class="team-preview-card" id="team-preview-card">
+                <span id="team-preview-orb" class="team-preview-orb"></span>
+                <strong id="team-preview-name">Time Azul</strong>
+              </div>
+            </div>
+            <div class="team-modal-actions">
+              <button id="team-modal-cancel" class="team-modal-cancel" type="button">Cancelar</button>
+              <button id="team-modal-save" class="team-modal-save" type="button">Salvar</button>
+            </div>
+          </div>
+  </div>
+
   <div id="orientation-hint" class="orientation-hint"><div>↻</div><strong>Gire o aparelho</strong><span>Este jogo foi otimizado para celular e tablet na horizontal.</span></div>
   <div id="no-skip-modal" class="game-modal" role="dialog" aria-modal="true" aria-labelledby="no-skip-title">
     <div class="game-modal-card">
@@ -334,8 +377,21 @@
       </div>
     </div>
   </div>
+  <div id="delete-team-modal" class="game-modal" role="dialog" aria-modal="true" aria-labelledby="delete-team-title">
+    <div class="game-modal-backdrop" data-delete-team-close></div>
+    <div class="game-modal-card delete-team-card">
+      <div class="game-modal-icon">×</div>
+      <p class="eyebrow">EXCLUIR TIME SALVO</p>
+      <h2 id="delete-team-title">Excluir <span id="delete-team-name">este time</span>?</h2>
+      <p>O time sairá do ranking. O histórico das partidas anteriores será preservado.</p>
+      <div class="game-modal-actions">
+        <button id="delete-team-cancel" class="secondary-button" type="button">Cancelar</button>
+        <button id="delete-team-confirm" class="primary-button danger-confirm" type="button">Excluir time</button>
+      </div>
+    </div>
+  </div>
   <div id="toast" class="toast"></div>
-  <script src="words.js?v=2.9.31"></script>
-  <script src="app.js?v=2.9.31"></script>
+  <script src="words.js?v=2.11.0"></script>
+  <script src="app.js?v=2.11.0"></script>
 </body>
 </html>

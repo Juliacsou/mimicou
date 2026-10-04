@@ -1,4 +1,6 @@
-const GAME_CATEGORIES = [
+// words.js - Dataset completo para o jogo de mímica / charadas
+
+let GAME_CATEGORIES = [
   {
     id: "lugares",
     name: "Lugares",
@@ -113,7 +115,7 @@ const GAME_CATEGORIES = [
   {
     id: "marcas",
     name: "Marcas",
-    emoji: "🏷️️",
+    emoji: "🏷",
     words: [
       "Apple", "Samsung", "Motorola", "Xiaomi", "LG", "Sony", "Nintendo", "PlayStation", "Xbox", "Google", "Amazon",
       "Nike", "Adidas", "Puma", "Havaianas", "Reebok", "Umbro", "Topper", "Penalty", 
@@ -326,4 +328,191 @@ const GAME_CATEGORIES = [
       "Tom Brady", "Mike Tyson", "Muhammad Ali", "Serena Williams", "Simone Biles",
       "Ana Hickmann", "Sabrina Sato", "Datena", "Chico Xavier", "Madre Teresa",
       "Che Guevara", "Winston Churchill", "Rainha Elizabeth II", "Príncipe William", "Barack Obama",
-      "Donald Trump", "J
+      "Donald Trump", "Joe Biden", "Vladimir Putin", "Luiz Inácio Lula da Silva", "Jair Bolsonaro",
+      "Karl Marx", "Sigmund Freud", "Pablo Escobar", "Zico", "Romário",
+      "Cafu", "Marta", "Hortência", "Thomas Edison", "Nikola Tesla"
+    ]
+  },
+  {
+    id: "pontos-turisticos",
+    name: "Pontos Turísticos",
+    emoji: "🗺️",
+    words: [
+      "Cristo Redentor", "Torre Eiffel", "Estátua da Liberdade", "Coliseu", "Big Ben",
+      "Taj Mahal", "Muralha da China", "Pirâmides do Egito", "Torre de Pisa", "Machu Picchu",
+      "Opera House", "Golden Gate", "Burj Khalifa", "Central Park", "Times Square",
+      "Disneylândia", "Hollywood", "Louvre", "Vaticano", "Pão de Açúcar",
+      "Cataratas do Iguaçu", "Pelourinho", "Farol da Barra", "Avenida Paulista", "Amazonia"
+    ]
+  },
+  {
+    id: "comidas",
+    name: "Comidas",
+    emoji: "🍕",
+    words: [
+      "Pizza", "Hambúrguer", "Hot dog", "Lasanha", "Macarrão", "Feijoada",
+      "Churrasco", "Arroz", "Feijão", "Strogonoff", "Purê de batata", "Batata frita",
+      "Salada", "Sopa", "Panqueca", "Omelete", "Coxinha", "Pastel",
+      "Pão de queijo", "Esfiha", "Kibe", "Sushi", "Temaki", "Yakisoba",
+      "Taco", "Burrito", "Nachos", "Sorvete", "Bolo", "Brigadeiro",
+      "Beijinho", "Pudim", "Chocolate", "Maçã", "Banana", "Morango",
+      "Melancia", "Uva", "Laranja", "Abacaxi", "Manga", "Pera",
+      "Cenoura", "Brócolis", "Tomate", "Queijo", "Iogurte", "Pipoca",
+      "Donut", "Croissant", "Pão francês", "Misto quente", "Pão com manteiga", "Pão de alho", "Farofa",
+      "Vinagrete", "Maionese de batata", "Salpicão", "Torta de frango", "Empada",
+      "Escondidinho de carne", "Nuggets", "Batata rústica", "Onion rings", "Frango à parmegiana",
+      "Bife a cavalo", "Ovo frito", "Ovo cozido", "Cuscuz", "Tapioca",
+      "Açaí", "Caldo de cana", "Água de coco", "Algodão-doce", "Churros",
+      "Maçã do amor", "Panetone", "Rabanada", "Torta de limão", "Pavê",
+      "Gelatina", "Salada de frutas", "Picolé", "Trufa", "Paçoca",
+      "Pé de moleque", "Bolacha recheada", "Biscoito de polvilho", "Cereja", "Kiwi",
+      "Pêssego", "Mamão", "Maracujá", "Limão", "Abacate",
+      "Alface", "Pepino", "Cebola", "Alho", "Ovo"
+    ]
+  },
+  {
+    id: "objetos",
+    name: "Objetos",
+    emoji: "🎒",
+    words: [
+      "Celular", "Computador", "Notebook", "Tablet", "Televisão", "Controle remoto",
+      "Teclado", "Mouse", "Fone de ouvido", "Relógio", "Óculos", "Espelho",
+      "Escova", "Pente", "Toalha", "Sabonete", "Shampoo", "Escova de dentes",
+      "Pasta de dentes", "Tesoura", "Caneta", "Lápis", "Borracha", "Caderno",
+      "Livro", "Mochila", "Mala", "Carteira", "Chave", "Cadeado",
+      "Lanterna", "Guarda-chuva", "Ventilador", "Geladeira", "Micro-ondas", "Fogão",
+      "Panela", "Prato", "Copo", "Talher", "Garrafa", "Vassoura",
+      "Rodo", "Balde", "Martelo", "Serrote", "Parafuso", "Furadeira",
+      "Almofada", "Cobertor", "Travesseiro", "Sofá", "Mesa", "Cadeira",
+      "Lâmpada", "Tomada", "Carregador", "Câmera", "Violão", "Bola",
+      "Chave de fenda", "Alicates", "Trena", "Nível de bolha", "Chave inglesa",
+      "Pregos", "Broca", "Lixadeira", "Extensão elétrica", "Fita isolante",
+      "Grampeador", "Clips de papel", "Corretivo líquido", "Apontador", "Estilete",
+      "Prancheta", "Perfurador de papel", "Bloco de notas", "Marcador de texto", "Pasta suspensa",
+      "Calculadora científica", "Fita adesiva", "Giz de cera", "Esquadro", "Compasso",
+      "Liquidificador", "Torradeira", "Sanduicheira", "Cafeteira elétrica", "Espremedor de frutas",
+      "Panela de pressão", "Escorredor de arroz", "Ralador de queijo", "Abridor de latas", "Saca-rolhas",
+      "Concha de feijão", "Espátula", "Peneira", "Forma de bolo", "Luva térmica",
+      "Ferro de passar", "Tábua de passar", "Pregador de roupa", "Varal", "Cabide",
+      "Esponja de aço", "Puxador de pia", "Desentupidor", "Lixeira", "Tapete de entrada",
+      "Secador de cabelo", "Chapinha", "Modelador de cachos", "Cortador de unha", "Pinça de sobrancelha",
+      "Almofada de pescoço", "Máscara de dormir", "Protetor auricular", "Termômetro clínico", "Bolsa de água quente",
+      "Apito", "Cadeirinha de bebê", "Bússola", "Globo terrestre", "Binóculos",
+      "Lupa", "Tesoura de unha", "Dedal", "Linha de costura", "Agulha",
+      "Alfinete", "Botão", "Zíper", "Cabide de calça", "Porta-retrato",
+      "Vaso de planta", "Regador", "Mangueira de jardim", "Tesoura de poda", "Pá de jardinagem",
+      "Cinto de segurança", "Macaco hidráulico", "Triângulo de sinalização", "Extintor de incêndio", "Capacete",
+      "Boia de piscina", "Óculos de natação", "Rede de vôlei", "Skate", "Patinete"
+    ]
+  },
+  {
+    id: "transportes",
+    name: "Transportes",
+    emoji: "🚗",
+    words: [
+      "Carro", "Ônibus", "Moto", "Bicicleta", "Caminhão", "Van",
+      "Táxi", "Metrô", "Trem", "Triciclo", "Patinete", "Skate", 
+      "Patins", "Limusine", "Viatura", "Ambulância", "Carro de bombeiro",
+      "Navio", "Barco", "Bote", "Lancha", "Veleiro", 
+      "Caiaque", "Canoa", "Jet ski", "Balsa", "Submarino", "Iate",
+      "Avião", "Helicóptero", "Foguete", "Balão", "Asa-delta", 
+      "Teleférico", "Bonde", "Carroça", "Charrete", "Trator"
+    ]
+  },
+  {
+    id: "vestuario",
+    name: "Vestuário",
+    emoji: "👕",
+    words: [
+      "Camiseta", "Camisa", "Calça", "Shorts", "Saia", "Vestido",
+      "Blusa", "Moletom", "Jaqueta", "Casaco", "Terno", "Gravata",
+      "Meia", "Sapato", "Tênis", "Sandália", "Chinelo", "Boné",
+      "Chapéu", "Cinto", "Luva", "Cachecol", "Óculos de sol", "Relógio",
+      "Brinco", "Colar", "Pulseira", "Anel", "Pijama", "Fantasia",
+      "Regata", "Cropped", "Blazer", "Colete", "Cardigã",
+      "Sobretudo", "Pantalona", "Legging", "Bermuda", "Macacão",
+      "Biquíni", "Maiô", "Roupão", "Meia-calça", "Touca",
+      "Boina", "Pashmina", "Presilha de cabelo", "Tiara", "Pochete"
+    ]
+  },
+  {
+    id: "futebol",
+    name: "Futebol",
+    emoji: "⚽",
+    words: [
+      "Gol", "Pênalti", "Escanteio", "Falta", "Impedimento", "Goleiro",
+      "Zagueiro", "Atacante", "Técnico", "Torcida", "Capitão", "Cartão amarelo",
+      "Cartão vermelho", "Cabeceio", "Drible", "Chuteira", "Trave", "Rede",
+      "Copa do Mundo", "Libertadores", "Champions League", "Palmeiras", "Corinthians", "São Paulo",
+      "Santos", "Flamengo", "Vasco", "Grêmio", "Internacional", "Cruzeiro",
+      "Atlético Mineiro", "Botafogo", "Fluminense", "Barcelona", "Real Madrid", "Manchester City",
+      "Liverpool", "PSG", "Messi", "Cristiano Ronaldo"
+    ]
+  },
+  {
+    id: "esportes",
+    name: "Esportes",
+    emoji: "🏅",
+    words: [
+      "Basquete", "Vôlei", "Tênis", "Natação", "Atletismo", "Ginástica",
+      "Handebol", "Rugby", "Beisebol", "Hóquei", "Golfe", "Surfe",
+      "Skate", "Judô", "Karatê", "Taekwondo", "Boxe", "Ciclismo",
+      "Escalada", "Esgrima", "Remo", "Canoagem", "Triatlo", "Badminton",
+      "Tênis de mesa", "Futsal", "Polo aquático", "Wrestling", "Hipismo", "Arco e flecha"
+    ]
+  },
+  {
+    id: "aplicativos",
+    name: "Aplicativos",
+    emoji: "📱",
+    words: [
+      "WhatsApp", "Instagram", "Facebook", "TikTok", "YouTube", "Netflix",
+      "Spotify", "Uber", "iFood", "Telegram", "X", "Threads",
+      "Pinterest", "LinkedIn", "Google Maps", "Waze", "Discord", "Zoom",
+      "Teams", "Gmail", "Google Drive", "Google Fotos", "Canva", "CapCut",
+      "Duolingo", "Tinder", "Twitch", "Amazon", "Mercado Livre", "ChatGPT",
+      "Nubank", "Pix", "99", "Rappi", "Disney+",
+      "Max", "Prime Video", "Globoplay", "Snapchat", "Messenger",
+      "Skype", "MSN Messenger", "Orkut", "Google Chrome", "Shopee",
+      "Shein", "Mercado Pago", "Airbnb", "Shazam", "Google Tradutor"
+    ]
+  },
+  {
+    id: "jogos-famosos",
+    name: "Jogos Famosos",
+    emoji: "🎮",
+    words: [
+      "Super Mario", "Sonic", "Pac-Man", "Tetris", "Pokémon",
+      "Minecraft", "GTA", "The Sims", "Candy Crush", "Angry Birds",
+      "Pou", "Free Fire", "FIFA", "Banco Imobiliário", "Detetive",
+      "Jogo da Vida", "Truco", "Dominó", "Xadrez", "Damas"
+    ]
+  },
+  {
+    id: "sud",
+    name: "SUD",
+    emoji: "⛪",
+    words: [
+      "Templo", "Missionário", "Missionária", "Bispo", "Presidente da Estaca", "Ala",
+      "Estaca", "Sacramento", "Batismo", "Confirmação", "Livro de Mórmon", "Doutrina e Convênios",
+      "Pérola de Grande Valor", "Joseph Smith", "Morôni", "Néfi", "Leí", "Alma",
+      "Mosias", "Helamã", "Liahona", "Placas de Ouro", "Anjo Morôni", "Primária",
+      "Seminário", "Instituto", "Sociedade de Socorro", "Quórum de Élderes", "Rapazes", "Moças",
+      "História da Família", "Selamento", "Recomendação para o Templo", "Conferência Geral", "Noite Familiar", "Jejum",
+      "Dízimo", "Testemunho", "Profeta", "Apóstolo",
+      "Setenta", "Patriarca", "Presidente de Ramo", "Presidência de Estaca", "Líder de Grupo",
+      "Conselheiro", "Secretário", "Professora da Primária", "Presidente das Moças",
+      "Presidente dos Rapazes", "Missionário Retornado", "Líder Missionário de Ala", "Pioneiro", "Profeta Vidente e Revelador",
+      "Bíblia", "Mundo Espiritual", "Jardim do Éden", "Nauvoo", "Kirtland",
+      "Praça do Templo", "Centro de Treinamento Missionário", "CTM", "Capela",
+      "Pia batismal", "Sala Celestial", "Árvore da Vida", "Visão da Árvore da Vida", "Pedra de Vidente",
+      "Urim e Tumim", "Placas de Latão", "Espada de Labão", "Igreja Verdadeira",
+      "Santa Ceia", "Água e Pão", "Bênção do sacerdócio", "Imposição de Mãos", "Óleo Consagrado",
+      "Batismo pelos Mortos", "Obra do Templo", "Genealogia", "Árvore Genealógica", "Fundo Perpétuo de Educação",
+      "Palavra de Sabedoria", "Lei da Castidade", "Dia de Sábado", "Discurso", "Ofertas de Jejum",
+      "Página de Guarda", "Lírio do Campo", "Hino", "Coro do Tabernáculo", "Conferência de Estaca",
+      "Entrevista com o Bispo", "Bênção Patriarcal", "Sessão de Investidura", "Casamento Eterno", "Fé em Ação",
+      "Líder de Jovens", "Amigos", "Companheiro", "Distrito", "Missão", "Conferência Anual"
+    ]
+  }
+];
