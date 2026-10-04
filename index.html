@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#10072b" />
+  <title>Mimicou!</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=2.9.31" />
+</head>
+<body>
+  <main class="app-shell">
+    <section id="home-screen" class="screen active home-screen">
+      <div class="home-stage card">
+        <button id="home-settings-icon" class="home-settings-icon" type="button" aria-label="Configurações">⚙</button>
+        <div class="home-lights" aria-hidden="true"></div>
+        <div class="home-center-panel" aria-hidden="true"></div>
+        <div class="home-logo"><img src="assets/images/home/mimicou-logo.png" alt="Mimicou!"></div>
+        <div class="home-actions">
+          <button id="home-play" class="primary-button home-play-button" type="button"><span>▶</span> JOGAR</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="settings-screen" class="screen settings-screen">
+      <div class="settings-shell card">
+        <header class="app-settings-header">
+          <button id="settings-back" class="ghost-button" type="button">← Voltar</button>
+          <div><p class="eyebrow">MIMICOU!</p><h2>Configurações do app</h2></div>
+          <span class="settings-saved">Salvo automaticamente</span>
+        </header>
+        <div class="app-settings-grid">
+          <section class="settings-group">
+            <div class="settings-group-title"><span>🔊</span><div><strong>Som</strong><small>Efeitos usados durante a partida</small></div></div>
+            <label class="setting-row switch-row"><div><strong>Efeitos sonoros</strong><small>Acertos, pulos e fim de jogo</small></div><input id="setting-sound" type="checkbox"><span class="switch"></span></label>
+            <label class="setting-row range-row"><div><strong>Volume dos efeitos</strong><small id="setting-volume-label">80%</small></div><input id="setting-volume" type="range" min="0" max="100" step="5"></label>
+            <label class="setting-row switch-row"><div><strong>Contagem regressiva</strong><small>Bipes nos últimos 5 segundos</small></div><input id="setting-countdown" type="checkbox"><span class="switch"></span></label>
+            <button id="test-sound" class="secondary-button compact" type="button">▶ Testar som</button>
+          </section>
+          <section class="settings-group">
+            <div class="settings-group-title"><span>✨</span><div><strong>Interface</strong><small>Preferências visuais e de feedback</small></div></div>
+            <label class="setting-row switch-row"><div><strong>Vibração</strong><small>Feedback tátil quando disponível</small></div><input id="setting-vibration" type="checkbox"><span class="switch"></span></label>
+            <label class="setting-row switch-row"><div><strong>Reduzir animações</strong><small>Diminui pulsos e movimentos</small></div><input id="setting-reduced-motion" type="checkbox"><span class="switch"></span></label>
+            <div class="settings-about"><span class="settings-version">Mimicou! · V1</span><p>Party game de mímica feito para jogar entre amigos.</p></div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section id="setup-screen" class="screen setup-screen">
+      <div class="setup-shell card setup-game-shell">
+        <header class="game-config-header">
+          <button id="setup-home" class="config-back-button" type="button" aria-label="Voltar ao início">←</button>
+          <div class="config-title-wrap">
+            <p class="eyebrow">NOVA PARTIDA</p>
+            <h2 id="config-screen-title">CONFIGURAR PARTIDA</h2>
+          </div>
+          <div class="config-header-actions">
+            <button id="reset-setup" class="config-reset-button" type="button" aria-label="Restaurar configurações" title="Restaurar configurações">
+              <img src="assets/icons/refresh.png" alt="">
+            </button>
+          </div>
+        </header>
+
+        <nav class="setup-tabs setup-tabs-two sr-tabs" aria-label="Etapas da configuração">
+          <button class="setup-tab active" data-tab="game" type="button"><span>1</span> Partida e times</button>
+          <button class="setup-tab" data-tab="categories" type="button"><span>2</span> Categorias</button>
+        </nav>
+
+        <div class="setup-content game-config-content">
+          <div class="setup-panel active setup-match-panel" data-panel="game">
+            <div class="game-config-top">
+              <section class="game-rule-grid" aria-label="Regras da partida">
+                <div class="game-setting-card">
+                  <div class="setting-card-title"><img class="setting-icon-img" src="assets/icons/teams.png" alt=""><strong>TIMES</strong></div>
+                  <div class="stepper game-stepper"><button type="button" data-step="teams" data-dir="-1">−</button><strong id="teams-value">2</strong><button type="button" data-step="teams" data-dir="1">+</button></div>
+                </div>
+                <div class="game-setting-card">
+                  <div class="setting-card-title"><img class="setting-icon-img" src="assets/icons/rounds.png" alt=""><strong>RODADAS</strong></div>
+                  <div class="stepper game-stepper"><button type="button" data-step="rounds" data-dir="-1">−</button><strong id="rounds-value">3</strong><button type="button" data-step="rounds" data-dir="1">+</button></div>
+                </div>
+                <div class="game-setting-card">
+                  <div class="setting-card-title"><img class="setting-icon-img" src="assets/icons/timer.png" alt=""><strong>TEMPO POR PALAVRA</strong></div>
+                  <div class="stepper game-stepper"><button type="button" data-step="seconds" data-dir="-1">−</button><strong id="seconds-value">30s</strong><button type="button" data-step="seconds" data-dir="1">+</button></div>
+                </div>
+                <div class="game-setting-card">
+                  <div class="setting-card-title"><img class="setting-icon-img" src="assets/icons/skip.png" alt=""><strong>PULOS POR TIME</strong></div>
+                  <div class="stepper game-stepper"><button type="button" data-step="skips" data-dir="-1">−</button><strong id="skips-value">2</strong><button type="button" data-step="skips" data-dir="1">+</button></div>
+                </div>
+              </section>
+            </div>
+
+            <section class="teams-section-wide">
+              <div class="teams-section-title"><img class="teams-title-icon-img" src="assets/icons/palette-title.png" alt=""><strong>NOMES E CORES DOS TIMES</strong></div>
+              <div id="teams-editor" class="teams-editor game-team-editor"></div>
+            </section>
+            <div class="setup-continue-bottom">
+              <button id="setup-next" class="primary-button config-continue-button" type="button"><span>▶</span> CONTINUAR</button>
+            </div>
+          </div>
+
+          <div class="setup-panel categories-panel" data-panel="categories">
+            <div class="categories-topbar">
+              <div class="categories-title-block">
+                <h3>ESCOLHA AS CATEGORIAS</h3>
+              </div>
+              <div class="category-heading-actions">
+                <span id="selected-category-count" class="selection-count"></span>
+                <button id="toggle-categories" class="text-button category-toggle-all" type="button">Selecionar todas</button>
+              </div>
+            </div>
+            <div id="categories-grid" class="categories-grid"></div>
+            <div class="categories-bottom-bar">
+              <div class="category-pagination">
+                <button id="categories-prev" class="pager-button" type="button" aria-label="Página anterior">‹</button>
+                <div id="categories-page-label" class="page-label">1 / 1</div>
+                <button id="categories-next" class="pager-button" type="button" aria-label="Próxima página">›</button>
+              </div>
+              <button id="start-game" class="primary-button category-continue-button" type="button"><span>▶</span> CONTINUAR</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="team-modal" class="team-modal hidden" aria-hidden="true">
+          <div class="team-modal-backdrop" data-team-modal-close></div>
+          <div class="team-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="team-modal-title">
+            <div class="team-modal-header">
+              <div>
+                <p class="team-modal-eyebrow">PERSONALIZAR TIME</p>
+                <h3 id="team-modal-title">Editar time</h3>
+              </div>
+              <button id="team-modal-close" class="team-modal-close" type="button" aria-label="Fechar">×</button>
+            </div>
+            <div class="team-modal-body">
+              <label class="team-modal-field">
+                <span>NOME DO TIME</span>
+                <input id="team-name-input-modal" type="text" maxlength="24" placeholder="Digite o nome do time">
+              </label>
+              <div class="team-modal-field">
+                <span>ESCOLHA A COR</span>
+                <div id="team-modal-colors" class="team-modal-colors"></div>
+              </div>
+              <div class="team-preview-card" id="team-preview-card">
+                <span id="team-preview-orb" class="team-preview-orb"></span>
+                <strong id="team-preview-name">Time Azul</strong>
+              </div>
+            </div>
+            <div class="team-modal-actions">
+              <button id="team-modal-cancel" class="team-modal-cancel" type="button">Cancelar</button>
+              <button id="team-modal-save" class="team-modal-save" type="button">Salvar</button>
+            </div>
+          </div>
+        </div>
+
+        <footer class="setup-footer config-footer">
+          <div id="setup-error" class="notice error hidden"></div>
+          <div class="setup-footer-actions">
+            <button id="setup-back" class="secondary-button compact hidden" type="button">← Voltar</button>
+            
+          </div>
+        </footer>
+      </div>
+    </section>
+
+    <section id="turn-screen" class="screen">
+      <div class="turn-layout card">
+        <aside class="turn-side">
+          <button class="turn-exit-button" data-action="quit" type="button"><span class="turn-exit-arrow">←</span><span>Sair</span></button>
+          <div class="round-chip">Rodada <strong id="turn-round">1</strong>/<span id="turn-round-total">3</span></div>
+
+          <div class="turn-score-panel">
+            <div class="turn-score-title">
+              <img src="assets/icons/scoreboard.png" alt="" class="turn-score-title-icon">
+              <span>PLACAR PARCIAL</span>
+            </div>
+            <p class="turn-score-caption">Pontuação acumulada até agora</p>
+            <div id="turn-scoreboard" class="mini-scoreboard"></div>
+          </div>
+        </aside>
+
+        <div class="turn-main">
+          <div class="turn-stage-bg" aria-hidden="true">
+            <span class="turn-spotlight turn-spotlight-left"></span>
+            <span class="turn-spotlight turn-spotlight-right"></span>
+            <span class="turn-confetti turn-confetti-a"></span>
+            <span class="turn-confetti turn-confetti-b"></span>
+            <span class="turn-confetti turn-confetti-c"></span>
+            <span class="turn-confetti turn-confetti-d"></span>
+          </div>
+
+          <div class="turn-ribbon">AGORA É A VEZ DO</div>
+          <div id="turn-team-dot" class="team-orb"></div>
+          <h2 id="turn-team-name">Time 1</h2>
+          <p class="turn-copy">Preparem-se! O relógio começa assim que a palavra aparecer.</p>
+
+          <div class="turn-meta">
+            <div class="turn-stat-card">
+              <img src="assets/icons/timer.png" alt="" class="turn-stat-icon">
+              <div><span>Tempo</span><strong id="turn-time">30s</strong></div>
+            </div>
+            <div class="turn-stat-card">
+              <img src="assets/icons/skip.png" alt="" class="turn-stat-icon">
+              <div><span>Pulos</span><strong id="turn-skips">2</strong></div>
+            </div>
+          </div>
+
+          <button id="begin-turn" class="primary-button turn-start-button" type="button"><span>▶</span> COMEÇAR!</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="play-screen" class="screen play-screen">
+      <div id="play-accent" class="play-accent"></div>
+      <div class="play-layout play-gameshow">
+        <div class="play-stage-art" aria-hidden="true"></div>
+
+        <header class="play-topbar">
+          <div class="play-team-card">
+            <div class="play-team-title"><span id="play-team-dot" class="small-dot"></span><strong id="play-team-name">Time 1</strong></div>
+            <div class="game-round">RODADA <strong id="play-round">1</strong> DE <span id="play-round-total">3</span></div>
+          </div>
+
+          <div id="timer-ring" class="timer-ring play-main-timer" style="--progress:1">
+            <div class="timer-inner"><span id="timer-value">30</span><small>SEG</small></div>
+          </div>
+
+          <div class="play-top-stats">
+            <div class="play-top-stat">
+              <span>PONTOS DO TIME</span>
+              <div class="play-top-value"><img src="assets/icons/star.png" alt=""><strong id="play-team-total">0</strong></div>
+            </div>
+            <div class="play-top-stat">
+              <span>PULOS RESTANTES</span>
+              <div class="play-top-value"><img src="assets/icons/skip.png" alt=""><strong id="skips-left">2</strong></div>
+            </div>
+          </div>
+        </header>
+
+        <section class="word-card play-word-card">
+          <div class="category-badge play-category-badge">
+            <img id="word-category-icon" src="assets/categories/animais.png" alt="">
+            <span id="word-category">ANIMAIS</span>
+          </div>
+          <div id="current-word" class="current-word">Elefante</div>
+          <p class="word-hint">Faça a mímica. Não vale falar!</p>
+        </section>
+
+        <div class="play-actions-row">
+          <button id="skip-word" class="secondary-button danger action-button play-skip-button" type="button"><img src="assets/icons/skip.png" alt="" class="action-icon action-icon-img"><span>PULAR <b id="skip-label">(2)</b></span></button>
+          <button id="correct-word" class="primary-button success action-button play-correct-button" type="button"><img src="assets/icons/correct.png" alt="" class="action-icon action-icon-img"><span>ACERTOU!</span></button>
+        </div>
+
+        <div class="play-current-turn-points" aria-live="polite">+<strong id="turn-points">0</strong> nesta vez</div>
+      </div>
+    </section>
+
+    <section id="turn-result-screen" class="screen result-stage-screen">
+      <div class="turn-result-layout card">
+        <div class="turn-result-star-wrap" aria-hidden="true">
+          <img src="assets/icons/star.png" alt="" class="turn-result-star">
+        </div>
+        <p class="eyebrow turn-result-pill">FIM DA VEZ · RODADA <span id="turn-result-round">1</span></p>
+        <h2 id="turn-result-team">Time Azul</h2>
+        <p class="turn-result-copy">Boa! Hora de passar o tablet.</p>
+        <div class="turn-result-stats">
+          <div class="turn-result-stat">
+            <span>Nesta vez</span>
+            <strong><em>+</em><b id="turn-result-points">0</b></strong>
+          </div>
+          <div class="turn-result-stat">
+            <span>Total do time</span>
+            <strong><b id="turn-result-total">0</b></strong>
+          </div>
+        </div>
+        <button id="turn-result-next" class="primary-button" type="button">Próximo time →</button>
+      </div>
+    </section>
+
+    <section id="round-screen" class="screen round-screen">
+      <div class="summary-layout round-summary-layout card">
+        <div class="round-summary-backdrop" aria-hidden="true"></div>
+
+        <div class="round-summary-intro">
+          <div class="round-summary-badge">
+            <div class="round-summary-star-wrap"><img src="assets/icons/star.png" alt="" class="round-summary-star"></div>
+            <div class="round-summary-pill">RODADA CONCLUÍDA</div>
+          </div>
+          <h2>Rodada <span id="summary-round">1</span></h2>
+          <p>Veja o placar antes de seguir.</p>
+        </div>
+
+        <div id="round-scoreboard" class="scoreboard round-gameshow-scoreboard"></div>
+
+        <button id="next-round" class="primary-button summary-button round-summary-button" type="button">Próxima rodada →</button>
+      </div>
+    </section>
+
+        <section id="final-screen" class="screen final-screen">
+      <div class="final-stage-layout card">
+        <div class="final-stage-backdrop" aria-hidden="true"></div>
+
+        <div class="final-hero">
+          <div class="final-badge" aria-hidden="true">
+            <span class="final-badge-icon">🏆</span>
+            <span class="final-badge-icon">🥳</span>
+          </div>
+          <p class="eyebrow final-pill">FIM DE JOGO</p>
+          <h2 id="winner-title">Temos um vencedor!</h2>
+          <p id="winner-copy" class="final-copy"></p>
+        </div>
+
+        <div id="final-scoreboard" class="scoreboard final-gameshow-scoreboard"></div>
+
+        <div class="final-actions final-stage-actions">
+          <button id="play-again" class="primary-button" type="button">Jogar novamente</button>
+          <button id="new-game" class="secondary-button final-config-button" type="button">Nova configuração</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="orientation-hint" class="orientation-hint"><div>↻</div><strong>Gire o aparelho</strong><span>Este jogo foi otimizado para celular e tablet na horizontal.</span></div>
+  <div id="no-skip-modal" class="game-modal" role="dialog" aria-modal="true" aria-labelledby="no-skip-title">
+    <div class="game-modal-card">
+      <div class="game-modal-icon">⚠</div>
+      <p class="eyebrow">SEM PULOS RESTANTES</p>
+      <h2 id="no-skip-title">Encerrar sua vez?</h2>
+      <p>Você já usou todos os pulos. Se confirmar, esta palavra será abandonada e a vez termina agora.</p>
+      <div class="game-modal-actions">
+        <button id="no-skip-cancel" class="secondary-button" type="button">Continuar tentando</button>
+        <button id="no-skip-confirm" class="primary-button danger-confirm" type="button">Encerrar vez</button>
+      </div>
+    </div>
+  </div>
+  <div id="toast" class="toast"></div>
+  <script src="words.js?v=2.9.31"></script>
+  <script src="app.js?v=2.9.31"></script>
+</body>
+</html>
